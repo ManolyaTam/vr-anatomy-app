@@ -1,0 +1,50 @@
+newmtl cleanedObj:material_0
+illum 4
+Kd 0.75 0.75 0.75
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 1.00 1.00 1.00
+Ns 0.00
+newmtl craniofacialAtlasTextured:blinn145SG
+illum 4
+Kd 0.85 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl craniofacialAtlasTextured:blinn151SG
+illum 4
+Kd 0.00 0.00 1.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl craniofacialAtlasTextured:blinn153SG
+illum 4
+Kd 1.00 0.99 0.85
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl craniofacialAtlasTextured:connector_blinn80SG
+illum 4
+Kd 0.99 1.00 0.61
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl craniofacialAtlasTextured:initialShadingGroup1
+illum 4
+Kd 1.00 0.52 0.55
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl craniofacialAtlasTextured:lambert10SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.14 0.14 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
