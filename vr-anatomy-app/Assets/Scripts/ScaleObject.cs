@@ -12,7 +12,7 @@ public class scaleObject : MonoBehaviour
 
     // Minimum and maximum scales for the object
     private float MinScale = 0.9f;
-    private float MaxScale = 1.9f;
+    private float MaxScale = 1.7f;
 
     // Update is called once per frame
     void Update()
