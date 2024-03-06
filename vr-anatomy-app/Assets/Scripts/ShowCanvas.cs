@@ -3,12 +3,12 @@ using System;
 
 public class ShowCanvas : MonoBehaviour
 {
-    public GameObject canvas;
+    public GameObject panel;
     //public GameObject VRController; // Reference to the VR controller
     //private float distanceThreshold = 2f; // Distance threshold to show the canvas
     private void Start()
     {
-        canvas.SetActive(false);
+        panel.SetActive(false);
     }
     public void ShowCanvasPanel()
     {
@@ -21,10 +21,10 @@ public class ShowCanvas : MonoBehaviour
         //{
         //    canvas.SetActive(true);
         //}
-        canvas.SetActive(true);
+        panel.SetActive(true);
     }
     public void HideCanvasPanel()
     {
-        canvas.SetActive(false);
+        panel.SetActive(false);
     }
 }
