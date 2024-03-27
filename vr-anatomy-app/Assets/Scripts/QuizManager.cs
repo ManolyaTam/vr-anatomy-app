@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class QuizManager : MonoBehaviour
 {
-    public Dictionary<string, List<QuestionsAndAnswers>> organQuizzes; // Dictionary to store quizzes for each organ
+    private Dictionary<string, List<QuestionsAndAnswers>> organQuizzes; // Dictionary to store quizzes for each organ
+    
     public GameObject[] options;
     private int currentQuestion;
 
@@ -26,66 +27,21 @@ public class QuizManager : MonoBehaviour
 
     public GameObject heartPart1;
 
-
     private void Start()
     {
         organ = organTitle.text;
-        //organ = GetComponent<ToggleOrganName>().organTitle;
         score = 0;
 
         // Initialize the dictionary and populate quizzes for each organ
-        organQuizzes = new Dictionary<string, List<QuestionsAndAnswers>>();
-
-        List<QuestionsAndAnswers> heartQuiz = new List<QuestionsAndAnswers>();
-        QuestionsAndAnswers q1 = new QuestionsAndAnswers();
-        QuestionsAndAnswers q2 = new QuestionsAndAnswers();
-        QuestionsAndAnswers q3 = new QuestionsAndAnswers();
-        QuestionsAndAnswers q4 = new QuestionsAndAnswers();
+        QuizData quizData = ScriptableObject.CreateInstance<QuizData>();
+        organQuizzes = quizData.getQuizData();
         QuestionsAndAnswers q5 = new QuestionsAndAnswers();
-
-
-        q1.question = "This is X";
-        q1.answers = new string[] { "X", "Y", "Z", "W" };
-        q1.correctAnswer = 0;
-
-        q2.question = "This is Y";
-        q2.answers = new string[] { "X", "Y", "Z", "W" };
-        q2.correctAnswer = 1;
-
-        q3.question = "This is Z";
-        q3.answers = new string[] { "X", "Y", "Z", "W" };
-        q3.correctAnswer = 2;
-
-        q4.question = "What is the selected part?";
-        q4.answers = new string[] { "Superior vena cava", "Aorta", "Pulmonary artery", "Pulmonary vein" };
-        q4.correctAnswer = 1;
-        q4.organ = heartPart1;
-
-        q5.question = "This is W";
-        q5.answers = new string[] { "X", "Y", "Z", "W" };
-        q5.correctAnswer = 3;
-
-        heartQuiz.Add(q1);
-        heartQuiz.Add(q2);
-        heartQuiz.Add(q3);
-        heartQuiz.Add(q4);
-        organQuizzes.Add("Heart", heartQuiz);
-
-        List<QuestionsAndAnswers> chestQuiz = new List<QuestionsAndAnswers>();
-        chestQuiz.Add(q1);
-        chestQuiz.Add(q5);
-
-        organQuizzes.Add("Chest", chestQuiz);
-
-        List<QuestionsAndAnswers> brainQuiz = new List<QuestionsAndAnswers>();
-        brainQuiz.Add(q1);
-        brainQuiz.Add(q2);
-
-        organQuizzes.Add("Brain", brainQuiz);
-
-        //StartQuiz();
+        q5.question = "What is the selected part?";
+        q5.answers = new string[] { "Superior vena cava", "Aorta", "Pulmonary artery", "Pulmonary vein" };
+        q5.correctAnswer = 1;
+        q5.organ = heartPart1;
+        organQuizzes["Heart"].Add(q5);
     }
-
     public void StartQuiz()
     {
         // Get the quiz for the specified organ
@@ -108,7 +64,7 @@ public class QuizManager : MonoBehaviour
             currentQuestion = Random.Range(0, quiz.Count);
 
             questionText.text = quiz[currentQuestion].question;
-            if (quizPanel.active == true && quiz[currentQuestion].organ != null)
+            if (quizPanel.activeInHierarchy == true && quiz[currentQuestion].organ != null)
             {
                 quiz[currentQuestion].organ.SetActive(true);
             }
@@ -165,6 +121,7 @@ public class QuizManager : MonoBehaviour
     public void Retry()
     {
         // Bug here: when a question with image appears the first one, the image doesn't apear with it
+        // One more: this button sometimes return back to the portal like Back()
         Start();
         resultPanel.SetActive(false);
         quizPanel.SetActive(true);

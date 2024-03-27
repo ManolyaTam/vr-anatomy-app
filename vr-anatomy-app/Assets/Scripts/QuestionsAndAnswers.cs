@@ -1,8 +1,8 @@
 using UnityEngine;
 
-[System.Serializable]
+//[System.Serializable]
 
-public class QuestionsAndAnswers 
+public class QuestionsAndAnswers
 {
     public string question;
     public string[] answers;
