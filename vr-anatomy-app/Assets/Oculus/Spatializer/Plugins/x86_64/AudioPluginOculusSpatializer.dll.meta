@@ -12,6 +12,16 @@ PluginImporter:
   validateReferences: 1
   platformData:
   - first:
+      : Editor
+    second:
+      enabled: 0
+      settings:
+        CPU: X86_64
+        OS: Windows
+  - first:
+      Any: 
+    second:
+      enabled: 0
       Any: 
     second:
       enabled: 1
@@ -19,6 +29,11 @@ PluginImporter:
   - first:
       Editor: Editor
     second:
+      enabled: 1
+      settings:
+        CPU: X86_64
+        DefaultValueInitialized: true
+        OS: Windows
       enabled: 0
       settings:
         CPU: x86_64
@@ -28,6 +43,11 @@ PluginImporter:
     second:
       enabled: 1
       settings:
+        CPU: AnyCPU
+  - first:
+      Standalone: OSXUniversal
+    second:
+      enabled: 0
         CPU: x86_64
   - first:
       Standalone: OSXUniversal
