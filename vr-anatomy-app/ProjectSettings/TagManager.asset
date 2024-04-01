@@ -6,7 +6,6 @@ TagManager:
   tags:
   - organ
   - VRController
-  - retry
   layers:
   - Default
   - TransparentFX

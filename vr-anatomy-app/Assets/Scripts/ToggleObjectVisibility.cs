@@ -9,7 +9,6 @@ public class ToggleObjectVisibility : MonoBehaviour
     {
         bodyPartScript = GameObject.FindObjectOfType<BodyPart>();
     }
-
     // Method to toggle visibility when the button is clicked
     public void Toggle_ObjectVisibility()
     {
