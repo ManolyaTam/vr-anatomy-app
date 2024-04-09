@@ -282,7 +282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35a2ec65a3c4d9d4893ff0cf24937a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: {fileID: 5756714371296749779, guid: f31869ad585a9c24186f5498dc747cef, type: 3}
+  labelPrefab: {fileID: 5756714371296749779, guid: f31869ad585a9c24186f5498dc747cef,
+    type: 3}
   labelsParent: {fileID: 1987095867}
 --- !u!4 &1536589449
 Transform:
