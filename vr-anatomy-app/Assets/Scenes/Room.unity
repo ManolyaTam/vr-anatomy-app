@@ -255,6 +255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lab_Machine
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa3b98e199203884797f377c3d8dbd2d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 65702495048144492, guid: fa3b98e199203884797f377c3d8dbd2d, type: 3}
@@ -583,6 +588,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Table
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c56358d4eb5f8794eb75e7709d412af9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -769,7 +779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &88409432
 Transform:
   m_ObjectHideFlags: 0
@@ -4165,6 +4175,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Station
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce9a0b6706e49b54ebca230bdcc9a124,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1151388028547126963, guid: ce9a0b6706e49b54ebca230bdcc9a124,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4265,6 +4280,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mecha
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 971fbb075fefb2f4bb618872ad94c116,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4522,15 +4542,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6760006457085410412, guid: 6a9928520d981014687f6666237d5454,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -5700583898405867574, guid: 6a9928520d981014687f6666237d5454,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 5ac9f8105e9747d428ab1faf84c1d32b, type: 2}
+    - target: {fileID: -273353342483235333, guid: 6a9928520d981014687f6666237d5454,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6a9928520d981014687f6666237d5454,
         type: 3}
       propertyPath: m_Name
       value: Medical Cart
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6a9928520d981014687f6666237d5454,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2653010474516046797, guid: 6a9928520d981014687f6666237d5454,
         type: 3}
@@ -8810,6 +8845,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Angilogy
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f760f1b06f2cf1a4c8b9cb0ea29c6961,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9817,6 +9857,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: medical tubes
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 83c71ef495b9e724a9f64bed9277854e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10435,6 +10480,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Body
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dc6089d34dedcd84883e615638615931,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10989,6 +11039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Splanchnology
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b4fa373325cd00743b78322de8084418,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12155,6 +12210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2d39c1de90e98c4b88dfca9b72b1cb0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13756,6 +13816,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Can
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e8e88315e5f37904db654754bdd01901,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15488,7 +15553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &490521564661322574
 GameObject:
   m_ObjectHideFlags: 0
@@ -18245,7 +18310,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &2419738697832664735
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23576,7 +23641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6713805231838194645
 GameObject:
   m_ObjectHideFlags: 0
