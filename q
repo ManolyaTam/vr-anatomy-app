@@ -1,0 +1,57 @@
+[33m14c28b2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdev[m[33m)[m removing unnecessary quiz room objects, making that room visible in all scenes, moving camera inside the room ... etc, quiz not fully functional yet
+[33m2c138cb[m organizing scripts and enhancing ObjectCreator Script readability
+[33m4b486c2[m creating a simple script for generating cubes and grouping them under one parent, this feature will later be used for model labels
+[33m4bb04c8[m loading scene additives, fixing some issues after last merge, updating scene manager navigation
+[33m11dc19c[m Merge pull request #6 from ManolyaTam/manolya
+[33ma613902[m Merge branch 'dev' into manolya
+[33m8f5c33a[m fixing retry and back buttons' overlap
+[33m9571267[m renamig scene to Explore
+[33m03b1d17[m fixing positions and rotations of models, linking start scene with my new scene ..
+[33mc61c2d8[m adding grid plane
+[33m42efb10[m adding rotation and scaling with controller functionalities (using joystick)
+[33m694e055[m creating an empty scene with one model only and changing controller model to the white one
+[33m014a021[m Add real questions and Skull Puzzle
+[33m60e563a[m add more organs and more questions to the quiz
+[33m676af4b[m Create a dummy quiz
+[33m7583fb9[m Replace markers with show info button
+[33mff507ca[m merge branch 'dev' of https://github.com/ManolyaTam/vr-anatomy-app into dev
+[33m6d83196[m Add Control Tools for the chest model
+[33m5711229[m Merge pull request #2 from ManolyaTam/dev
+[33mfd14e90[m Edit the canvas, add sound effects, and add Models UI
+[33mc7868cb[m moving canvas to room scene
+[33m38dabbc[m Merge pull request #1 from ManolyaTam/canvas-dev
+[33m572d960[m Add sound effect in the background
+[33m739e7a4[m adding settings and about buttons with corresponding buttons and ui objects
+[33m18bfeb5[m Added space environment with stars and planets
+[33m72bef00[m Add show Info button on Chest model
+[33m45e01d0[m Edit the scripts and add the Canvas prefab to some models
+[33m678e2a0[m adding new scene with menu and start button, the button turns on the light and hides the menu
+[33m2e36a6e[m Add canvas (panel + buttons) to the Chest model to scale and rotate the organ
+[33m248c409[m Return back the remote controller
+[33mefe8a32[m Add more lab objects to the scene
+[33mfb6974f[m Resolve and Merge
+[33m1f3e5b9[m Add Med Lab objects
+[33me82b5aa[m creating a simple canvas with welcome message and ok button (not interactable yet)
+[33m51de14a[m Merge branch 'dev' of https://github.com/ManolyaTam/vr-anatomy-app into dev This merge is to prepare the project for builds.
+[33m1a2ce5b[m Reduce the size of some models and delete some
+[33medebd89[m getting project ready for builds
+[33m918a8d0[m Add more models
+[33m8f0ff5d[m Add some metadata files
+[33mebafdad[m Add an Ecorche Skeleton model
+[33md08bb54[m Add a Female Reproductive System model
+[33m3f2574b[m Add a Realistic Heart model (textures)
+[33m9c89540[m Add a Realistic Heart model (source)
+[33m201ee89[m Add a Brain model
+[33mc737329[m Add a Heart model
+[33m37d61e4[m Add a Skull model
+[33m2649947[m Add a lab scene and more organs
+[33mc6d5399[m Add a lab scene and more organs
+[33mfcf5bc8[m Replace device controllers with hands
+[33m871264e[m Add a chest and some labels and remove the red line
+[33mfcb0d28[m Add some grabbable objects
+[33m4650661[m Add Device Controllers
+[33m3d5d3a0[m fixing controller, now it works with XR interaction tool
+[33m2d74b94[m Add a scene and a background
+[33m593f5ac[m Setting up a VR project from scratch
+[33md43b23c[m Initial Commit
+[33mfd752a9[m Initial commit
