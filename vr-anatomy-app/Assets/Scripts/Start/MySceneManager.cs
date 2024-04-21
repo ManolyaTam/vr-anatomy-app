@@ -33,4 +33,9 @@ public class MySceneManager : MonoBehaviour
         SceneManager.LoadScene("Start"); // back to start and unload all other scenes
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
     }
+
+    public void resetScene() // exit current scene and only load "Start" scene
+    {
+        SceneManager.LoadScene("Start");
+    }
 }
