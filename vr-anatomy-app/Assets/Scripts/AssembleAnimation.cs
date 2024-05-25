@@ -93,8 +93,8 @@ public class AssembleAnimation : MonoBehaviour
             initialLocalRotations[i] = parts[i].partTransform.localRotation;
 
             // Set the separated position and rotation
-            //separatedPositions[i] = parts[i].partTransform.localPosition + new Vector3(0, 0, 5); 
             separatedPositions[i] = GetUniqueSeparatedPosition(i);
+            //separatedPositions[i] = GetUniqueSeparatedPosition(i, parts[i].partTransform);
 
             separatedRotations[i] = parts[i].partTransform.localRotation;
             //separatedRotations[i] = Quaternion.Euler(GetUniqueSeparatedRotation(i));
@@ -153,14 +153,33 @@ public class AssembleAnimation : MonoBehaviour
     {
         // Generate positions in a circular pattern around the origin
         float angle = index * Mathf.PI * 2 / parts.Length;
-        float radius = 1.0f; 
+        float radius = 0.5f;
         return new Vector3(Mathf.Cos(angle) * radius, 0, Mathf.Sin(angle) * radius);
     }
 
-    Vector3 GetUniqueSeparatedRotation(int index)
+    Vector3 GetUniqueSeparatedPosition(int index, Transform partTransform)
     {
-        // set a unique rotation for each part
-        return new Vector3(0, index * 45.0f, 0);
+        // Generate positions in a circular pattern around the origin
+        float angle = index * Mathf.PI * 2 / parts.Length;
+        float radius = 0.5f;
+        Vector3 circularPosition = new Vector3(Mathf.Cos(angle) * radius, 0, Mathf.Sin(angle) * radius);
+
+        // Convert circular position to local space relative to the part
+        Vector3 localCircularPosition = partTransform.InverseTransformDirection(circularPosition);
+
+        // Return the initial position plus the local circular position
+        return partTransform.localPosition + localCircularPosition;
+    }
+    public void ResetParts()
+    {
+        for (int i = 0; i < parts.Length; i++)
+        {
+            parts[i].partTransform.localPosition = initialLocalPositions[i];
+            parts[i].partTransform.localRotation = initialLocalRotations[i];
+        }
+
+        // Stop any ongoing animation
+        isAnimating = false;
     }
 }
 
