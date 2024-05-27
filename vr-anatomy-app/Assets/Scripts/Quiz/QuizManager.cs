@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine;
+using System.Collections;
+using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
 {
@@ -101,24 +103,50 @@ public class QuizManager : MonoBehaviour
 
     public void Correct()
     {
-        if (quizPanel.activeInHierarchy == true && organQuizzes[organ][currentQuestion].organ != null)
-        {
-            organQuizzes[organ][currentQuestion].organ.SetActive(false);
-        }
+        //if (quizPanel.activeInHierarchy == true && organQuizzes[organ][currentQuestion].organ != null)
+        //{
+        //    organQuizzes[organ][currentQuestion].organ.SetActive(false);
+        //}
         score++;
-        currentQuestion++;
-        //organQuizzes[organ].RemoveAt(currentQuestion); // Remove question from the quiz
-        generateQuestion(organQuizzes[organ]);
+        //currentQuestion++;
+        ////organQuizzes[organ].RemoveAt(currentQuestion); // Remove question from the quiz
+        //generateQuestion(organQuizzes[organ]);
+        StartCoroutine(NextQuestionAfterDelay());
     }
 
     public void Wrong()
     {
+        //currentQuestion++;
+        ////organQuizzes[organ].RemoveAt(currentQuestion); // Remove question from the quiz
+        //generateQuestion(organQuizzes[organ]);
+        StartCoroutine(NextQuestionAfterDelay());
+    }
+
+    private IEnumerator NextQuestionAfterDelay()
+    {
+        // Disable all buttons to prevent clicking during the delay
+        foreach (GameObject option in options)
+        {
+            option.GetComponent<Button>().interactable = false;
+        }
+
+        yield return new WaitForSeconds(2);
+
+        // Enable all buttons back after the delay
+        foreach (GameObject option in options)
+        {
+            option.GetComponent<Button>().interactable = true;
+        }
+
         if (quizPanel.activeInHierarchy == true && organQuizzes[organ][currentQuestion].organ != null)
         {
             organQuizzes[organ][currentQuestion].organ.SetActive(false);
         }
         currentQuestion++;
-        //organQuizzes[organ].RemoveAt(currentQuestion); // Remove question from the quiz
+        foreach (GameObject option in options)
+        {
+            option.GetComponent<Answer>().ResetColor(); // Reset color of options
+        }
         generateQuestion(organQuizzes[organ]);
     }
 
