@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e34a44e69b9c4243aa93e4e6182c69c, type: 3}
+  m_Name: Chest
+  m_EditorClassIdentifier: 
+  OrganName: Chest
+  questionsAndAnswers:
+  - question: Which of the following organs is located in the chest cavity?
+    answers:
+    - Lungs
+    - Liver
+    - Kidneys
+    - Stomach
+    correctAnswer: 0
+    organ: {fileID: 0}
+  - question: What is the primary function of the lungs?
+    answers:
+    - Digestion
+    - Pumping blood
+    - Thinking
+    - Gas exchange
+    correctAnswer: 3
+    organ: {fileID: 0}
+  - question: Which muscle helps in breathing by expanding the chest cavity?
+    answers:
+    - Biceps
+    - Diaphragm
+    - Quadriceps
+    - Gluteus Maximus
+    correctAnswer: 1
+    organ: {fileID: 0}
+  - question: Which organ produces red blood cells and is located in the chest cavity?
+    answers:
+    - Pancreas
+    - Spleen
+    - Liver
+    - Bone marrow
+    correctAnswer: 3
+    organ: {fileID: 0}
+  - question: Which of the following is not a part of the respiratory system?
+    answers:
+    - Bronchi
+    - Lungs
+    - Trachea
+    - Stomach
+    correctAnswer: 3
+    organ: {fileID: 0}

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e34a44e69b9c4243aa93e4e6182c69c, type: 3}
+  m_Name: Brain
+  m_EditorClassIdentifier: 
+  OrganName: Brain
+  questionsAndAnswers:
+  - question: Which part of the brain is responsible for higher cognitive functions
+      such as thinking and decision-making?
+    answers:
+    - Cerebrum
+    - Cerebellum
+    - Brainstem
+    - Hippocampus
+    correctAnswer: 0
+    organ: {fileID: 0}
+  - question: Which part of the brain is responsible for coordinating muscle movements
+      and maintaining balance?
+    answers:
+    - Cerebrum
+    - Cerebellum
+    - Brainstem
+    - Thalamus
+    correctAnswer: 1
+    organ: {fileID: 0}
+  - question: Which part of the brain regulates basic functions such as breathing
+      and heart rate?
+    answers:
+    - Cerebrum
+    - Hippocampus
+    - Brainstem
+    - Pituitary gland
+    correctAnswer: 2
+    organ: {fileID: 0}
+  - question: Which part of the brain is associated with the formation of new memories?
+    answers:
+    - Cerebellum
+    - Thalamus
+    - Amygdala
+    - Hippocampus
+    correctAnswer: 3
+    organ: {fileID: 0}
+  - question: Which part of the brain is responsible for relaying sensory information
+      to the cerebral cortex?
+    answers:
+    - Hypothalamus
+    - Pons
+    - Thalamus
+    - Medulla oblongata
+    correctAnswer: 2
+    organ: {fileID: 0}

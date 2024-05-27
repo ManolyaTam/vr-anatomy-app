@@ -15,6 +15,9 @@ public class QuizData : ScriptableObject
         if (!organQuizzes.ContainsKey("Brain"))
             generateBrainQuiz();
 
+        if (!organQuizzes.ContainsKey("Skeleton"))
+            generateSkeletonQuiz();
+
         return organQuizzes;
     }
     public void generateHeartQuiz()
@@ -126,4 +129,66 @@ public class QuizData : ScriptableObject
 
         organQuizzes.Add("Brain", brainQuiz);
     }
+
+    public void generateSkeletonQuiz()
+    {
+        List<QuestionsAndAnswers> skeletonQuiz = new List<QuestionsAndAnswers>();
+
+        QuestionsAndAnswers q1 = new QuestionsAndAnswers();
+        q1.question = "What is the largest bone in the human body?";
+        q1.answers = new string[] { "Femur", "Humerus", "Tibia", "Fibula" };
+        q1.correctAnswer = 0;
+        skeletonQuiz.Add(q1);
+
+        QuestionsAndAnswers q2 = new QuestionsAndAnswers();
+        q2.question = "What is the primary function of the rib cage?";
+        q2.answers = new string[] { "To protect the heart and lungs", "To support the arms", "To aid in digestion", "To facilitate movement" };
+        q2.correctAnswer = 0;
+        skeletonQuiz.Add(q2);
+
+        QuestionsAndAnswers q3 = new QuestionsAndAnswers();
+        q3.question = "Which bone is commonly known as the collarbone?";
+        q3.answers = new string[] { "Scapula", "Clavicle", "Sternum", "Mandible" };
+        q3.correctAnswer = 1;
+        skeletonQuiz.Add(q3);
+
+        QuestionsAndAnswers q4 = new QuestionsAndAnswers();
+        q4.question = "What type of joint is the shoulder joint?";
+        q4.answers = new string[] { "Hinge joint", "Ball-and-socket joint", "Pivot joint", "Saddle joint" };
+        q4.correctAnswer = 1;
+        skeletonQuiz.Add(q4);
+
+        QuestionsAndAnswers q5 = new QuestionsAndAnswers();
+        q5.question = "Which part of the skeleton protects the brain?";
+        q5.answers = new string[] { "Rib cage", "Pelvis", "Spine", "Skull" };
+        q5.correctAnswer = 3;
+        skeletonQuiz.Add(q5);
+
+        organQuizzes.Add("Skeleton", skeletonQuiz);
+    }
+
+
+    // Initialize the dictionary and populate quizzes for each organ
+    //QuizData quizData = ScriptableObject.CreateInstance<QuizData>();
+    //organQuizzes = quizData.getQuizData();
+    //QuestionsAndAnswers heartQ6 = new QuestionsAndAnswers();
+    //heartQ6.question = "What is the selected part?";
+    //heartQ6.answers = new string[] { "Superior vena cava", "Aorta", "Pulmonary artery", "Pulmonary vein" };
+    //heartQ6.correctAnswer = 1;
+    //heartQ6.organ = heartPart1;
+    //organQuizzes["Heart"].Add(heartQ6);
+
+    //QuestionsAndAnswers skeletonQ6 = new QuestionsAndAnswers();
+    //skeletonQ6.question = "The vertebral column composed of: ";
+    //skeletonQ6.answers = new string[] { "30 vertebrae", "31 vertebrae", "32 vertebrae", "33 vertebrae" };
+    //skeletonQ6.correctAnswer = 3;
+    //skeletonQ6.organ = skeletonQ6Organ;
+    //organQuizzes["Skeleton"].Add(skeletonQ6);
+
+    //QuestionsAndAnswers skeletonQ7 = new QuestionsAndAnswers();
+    //skeletonQ7.question = "This bone is: ";
+    //skeletonQ7.answers = new string[] { "Humerus", "Clavicle", "Scapula", "Raius" };
+    //skeletonQ7.correctAnswer = 2;
+    //skeletonQ7.organ = skeletonQ7Organ;
+    //organQuizzes["Skeleton"].Add(skeletonQ7);
 }

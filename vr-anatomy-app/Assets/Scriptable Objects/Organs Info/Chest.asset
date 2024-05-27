@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff4394219516004a9cf5682d31e1d2f, type: 3}
+  m_Name: Chest
+  m_EditorClassIdentifier: 
+  partName: Chest
+  description: The chest, or thorax, is a vital area of the body that houses key
+    organs and structures. It includes the rib cage, which is composed of ribs and
+    the sternum, providing protection for the heart and lungs. The ribs are connected
+    to the spine at the back and curve around to the front, offering structural support
+    and aiding in breathing. The chest muscles, primarily the pectoral muscles, facilitate
+    movements of the shoulder and arm and assist in respiration. The diaphragm, a
+    crucial muscle located at the bottom of the chest cavity, plays a significant
+    role in breathing by contracting and expanding the lungs. Together, these components
+    of the chest ensure protection for vital organs, support for upper body movement,
+    and essential respiratory functions.

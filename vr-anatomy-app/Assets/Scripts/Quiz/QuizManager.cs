@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class QuizManager : MonoBehaviour
 {
+    public List<QuizDataObjects> organQuizDataList; // New: List to store ScriptableObject assets for each organ
+
     private Dictionary<string, List<QuestionsAndAnswers>> organQuizzes; // Dictionary to store quizzes for each organ
     
     public GameObject[] options;
@@ -26,21 +28,23 @@ public class QuizManager : MonoBehaviour
     private string organ;
 
     public GameObject heartPart1;
+    public GameObject skeletonQ6Organ;
+    public GameObject skeletonQ7Organ;
 
     private void Start()
     {
         organ = organTitle.text;
         score = 0;
+        currentQuestion = 0;
 
-        // Initialize the dictionary and populate quizzes for each organ
-        QuizData quizData = ScriptableObject.CreateInstance<QuizData>();
-        organQuizzes = quizData.getQuizData();
-        QuestionsAndAnswers q5 = new QuestionsAndAnswers();
-        q5.question = "What is the selected part?";
-        q5.answers = new string[] { "Superior vena cava", "Aorta", "Pulmonary artery", "Pulmonary vein" };
-        q5.correctAnswer = 1;
-        q5.organ = heartPart1;
-        organQuizzes["Heart"].Add(q5);
+        // Initialize the dictionary
+        organQuizzes = new Dictionary<string, List<QuestionsAndAnswers>>();
+
+        // Populate the dictionary with quiz data from ScriptableObjects
+        foreach (var quizData in organQuizDataList)
+        {
+            organQuizzes.Add(quizData.OrganName, new List<QuestionsAndAnswers>(quizData.questionsAndAnswers));
+        }
     }
     public void StartQuiz()
     {
@@ -55,19 +59,28 @@ public class QuizManager : MonoBehaviour
 
     private void generateQuestion(List<QuestionsAndAnswers> quiz)
     {
-        if (quiz.Count == 0)
+        if (quiz.Count == currentQuestion)
         {
             GameOver();
         }
         else
         {
-            currentQuestion = Random.Range(0, quiz.Count);
+            //currentQuestion = Random.Range(0, quiz.Count);
+            //currentQuestion = 0;
 
             questionText.text = quiz[currentQuestion].question;
-            if (quizPanel.activeInHierarchy == true && quiz[currentQuestion].organ != null)
+            //if (quizPanel.activeInHierarchy == true && quiz[currentQuestion].organ != null)
+            //{
+            //    quiz[currentQuestion].organ.SetActive(true);
+            //}
+            string modelName = $"{organ}Q{currentQuestion + 1}";
+            GameObject gameObject = IsGameObjectInScene(modelName);
+            if (gameObject != null)
             {
+                quiz[currentQuestion].organ = gameObject;
                 quiz[currentQuestion].organ.SetActive(true);
             }
+
             SetAnswers(quiz);
         }
     }
@@ -88,16 +101,24 @@ public class QuizManager : MonoBehaviour
 
     public void Correct()
     {
-        organQuizzes[organ][currentQuestion].organ?.SetActive(false);
+        if (quizPanel.activeInHierarchy == true && organQuizzes[organ][currentQuestion].organ != null)
+        {
+            organQuizzes[organ][currentQuestion].organ.SetActive(false);
+        }
         score++;
-        organQuizzes[organ].RemoveAt(currentQuestion); // Remove question from the quiz
+        currentQuestion++;
+        //organQuizzes[organ].RemoveAt(currentQuestion); // Remove question from the quiz
         generateQuestion(organQuizzes[organ]);
     }
 
     public void Wrong()
     {
-        organQuizzes[organ][currentQuestion].organ?.SetActive(false);
-        organQuizzes[organ].RemoveAt(currentQuestion); // Remove question from the quiz
+        if (quizPanel.activeInHierarchy == true && organQuizzes[organ][currentQuestion].organ != null)
+        {
+            organQuizzes[organ][currentQuestion].organ.SetActive(false);
+        }
+        currentQuestion++;
+        //organQuizzes[organ].RemoveAt(currentQuestion); // Remove question from the quiz
         generateQuestion(organQuizzes[organ]);
     }
 
@@ -121,10 +142,10 @@ public class QuizManager : MonoBehaviour
     public void Retry()
     {
         // Bug here: when a question with image appears the first one, the image doesn't apear with it
-        // One more: this button sometimes return back to the portal like Back()
         Start();
         resultPanel.SetActive(false);
         quizPanel.SetActive(true);
+        StartQuiz();
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Back()
@@ -132,5 +153,20 @@ public class QuizManager : MonoBehaviour
         Start();
         resultPanel.SetActive(false);
         portalPanel.SetActive(true);
+    }
+
+    GameObject IsGameObjectInScene(string objectName)
+    {
+        Scene scene = SceneManager.GetSceneByName("Quiz");
+
+        foreach (GameObject go in scene.GetRootGameObjects())
+        {
+            if (go.name == objectName)
+            {
+                return go;
+            }
+        }
+
+        return null;
     }
 }
