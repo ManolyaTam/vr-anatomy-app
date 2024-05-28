@@ -4762,7 +4762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 136566638}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: snap-point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9740,7 +9740,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -10928,7 +10928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &332259817
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11504,7 +11504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 363861387}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: snap-point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16621,7 +16621,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 536652891}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: snap-point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16904,7 +16904,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 542820610}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: snap-point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29921,7 +29921,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -34947,7 +34947,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 993216499}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: snap-point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44274,7 +44274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1269384169}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: snap-point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45465,7 +45465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1299037153
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47403,7 +47403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348100412}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: snap-point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48865,7 +48865,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -54738,6 +54738,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right_radius
       objectReference: {fileID: 0}
+    - target: {fileID: -7429141446687341334, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -6647282152892393497, guid: 3cff321f260d4ed40a025c788ad66f27,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54763,15 +54768,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Left_humerus
       objectReference: {fileID: 0}
+    - target: {fileID: -5278131478453897346, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -4956148613709938128, guid: 3cff321f260d4ed40a025c788ad66f27,
         type: 3}
       propertyPath: m_Name
       value: Trachea
       objectReference: {fileID: 0}
+    - target: {fileID: -4956148613709938128, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -4864582331810233339, guid: 3cff321f260d4ed40a025c788ad66f27,
         type: 3}
       propertyPath: m_Name
       value: Right_tibia
+      objectReference: {fileID: 0}
+    - target: {fileID: -4864582331810233339, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -4864582331810233339, guid: 3cff321f260d4ed40a025c788ad66f27,
         type: 3}
@@ -54858,6 +54878,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right_hip_bone
       objectReference: {fileID: 0}
+    - target: {fileID: 900989051366025403, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3cff321f260d4ed40a025c788ad66f27,
         type: 3}
       propertyPath: m_Name
@@ -54877,6 +54902,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Body of sternum
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590901665044025660, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1590901665044025660, guid: 3cff321f260d4ed40a025c788ad66f27,
         type: 3}
@@ -54912,6 +54942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Left_femur
+      objectReference: {fileID: 0}
+    - target: {fileID: 3517552684014453518, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4024551854411468729, guid: 3cff321f260d4ed40a025c788ad66f27,
         type: 3}
@@ -54960,6 +54995,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5791650726306140108, guid: 3cff321f260d4ed40a025c788ad66f27,
         type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5791650726306140108, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -54982,6 +55022,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Left_hip_bone
+      objectReference: {fileID: 0}
+    - target: {fileID: 6309210033518202477, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -67772,7 +67817,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1879130478}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: snap-point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72962,7 +73007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1993043641}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: snap-point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
