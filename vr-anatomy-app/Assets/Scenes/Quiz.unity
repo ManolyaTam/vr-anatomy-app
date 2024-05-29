@@ -9212,6 +9212,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280204644}
   m_Mesh: {fileID: -1796376691293787952, guid: 889e7913f9d45c84d85753dfbaa7cb98, type: 3}
+--- !u!114 &280317297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521137342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2501bdbd458c0024d89024439f83eeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parts: []
+--- !u!114 &280317298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521137342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a898ea4fe7b497c46aac43d256af7f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &288554790
 GameObject:
   m_ObjectHideFlags: 0
@@ -24353,6 +24378,14 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 544938301}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9889f0ff739a0694d9013216c800d6e4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1557669245}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9889f0ff739a0694d9013216c800d6e4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1557669244}
     - targetCorrespondingSourceObject: {fileID: -5151080213489269888, guid: 9889f0ff739a0694d9013216c800d6e4,
         type: 3}
       insertIndex: -1
@@ -39270,6 +39303,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 280317297}
+        m_TargetAssemblyTypeName: ModelResetter, Assembly-CSharp
+        m_MethodName: ResetToInitialState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1557669245}
+        m_TargetAssemblyTypeName: ModelResetter, Assembly-CSharp
+        m_MethodName: ResetToInitialState
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -55104,6 +55161,14 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 363861387}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 280317298}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3cff321f260d4ed40a025c788ad66f27,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 280317297}
     - targetCorrespondingSourceObject: {fileID: 900989051366025403, guid: 3cff321f260d4ed40a025c788ad66f27,
         type: 3}
       insertIndex: -1
@@ -56857,6 +56922,31 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 702607262}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1557669244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557669241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a898ea4fe7b497c46aac43d256af7f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1557669245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557669241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2501bdbd458c0024d89024439f83eeff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parts: []
 --- !u!1 &1559398425
 GameObject:
   m_ObjectHideFlags: 0

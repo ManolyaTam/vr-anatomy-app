@@ -56,7 +56,7 @@
 
 using UnityEngine;
 
-public class AssembleAnimation : MonoBehaviour
+public class AssembleAnimation : MonoBehaviour, IPartAssignable
 {
     [System.Serializable]
     public class Part
@@ -98,6 +98,15 @@ public class AssembleAnimation : MonoBehaviour
 
             separatedRotations[i] = parts[i].partTransform.localRotation;
             //separatedRotations[i] = Quaternion.Euler(GetUniqueSeparatedRotation(i));
+        }
+    }
+
+    public void AssignParts(Transform[] parts)
+    {
+        this.parts = new Part[parts.Length];
+        for (int i = 0; i < parts.Length; i++)
+        {
+            this.parts[i] = new Part { partTransform = parts[i] };
         }
     }
 
