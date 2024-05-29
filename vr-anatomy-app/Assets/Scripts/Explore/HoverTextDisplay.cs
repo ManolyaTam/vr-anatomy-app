@@ -21,9 +21,6 @@ public class HoverTextDisplay : MonoBehaviour
             Debug.LogError("Missing Panel reference in HoverTextDisplay script on " + gameObject.name);
         }
         panel.SetActive(false); // Hide the panel initially
-
-        // Add a log to test logging
-        Debug.Log("Hello, World!");
     }
 
     private void Update()
@@ -34,43 +31,40 @@ public class HoverTextDisplay : MonoBehaviour
             return;
         }
 
-        // Raycast for hover detection (mouse or VR controller)
-        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        // Raycast using VR specific input (replace with your VR input system's method)
+        bool isVRHovering = VRRaycastForHover(); // Implement this function to check for VR controller hover
+
+        if (isVRHovering) // Check for VR hover instead of mouse raycast
         {
-            GameObject hitObject = hit.collider.gameObject;
-            if (hitObject == gameObject) // Check if the hit object is the one we want to display hover text for
+            if (!isHovered)
             {
-                if (!isHovered)
-                {
-                    isHovered = true;
-                    // Update text with current object name
-                    textMeshPro.text = gameObject.name;
-                    panel.SetActive(true); // Show the panel
-                    Debug.Log("Hovering over: " + gameObject.name);
-                }
-            }
-            else
-            {
-                // Object is no longer hovered, hide panel
-                if (isHovered)
-                {
-                    isHovered = false;
-                    panel.SetActive(false); // Hide the panel
-                    Debug.Log("No longer hovering over: " + gameObject.name);
-                }
+                isHovered = true;
+                // Update text with current object name
+                textMeshPro.text = gameObject.name;
+                panel.SetActive(true); // Show the panel
+                Debug.Log("Hovering over with VR controller: " + gameObject.name);
             }
         }
         else
         {
-            // No object hovered, hide panel
+            // Object is no longer hovered (or mouse interaction), hide panel
             if (isHovered)
             {
                 isHovered = false;
                 panel.SetActive(false); // Hide the panel
-                Debug.Log("No object hovered.");
+                Debug.Log("No longer hovering with VR controller: " + gameObject.name);
             }
         }
+    }
+
+    // Function to implement VR specific raycast for hover detection (replace with your VR input system's method)
+    private bool VRRaycastForHover()
+    {
+        // Implement your VR input system's logic to check if a VR controller is hovering over the object
+        // This might involve checking for specific button presses or proximity to the object
+
+        // Example (replace with your actual implementation):
+        // return OVRInput.IsControllerTouching(OVRInput.Hand.Left); // Replace with your VR input system's method
+        return false; // Placeholder until you implement VR specific hover detection
     }
 }
