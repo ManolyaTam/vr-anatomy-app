@@ -15,7 +15,7 @@ public class PartSelection : MonoBehaviour
         interactable = GetComponent<XRSimpleInteractable>();
         //Add a listener to the onSelectEntered event
         interactable.onSelectEntered.AddListener(OnSelectEnter);
-        interactable.onSelectExit.AddListener(OnSelectExit);
+        interactable.onSelectExited.AddListener(OnSelectExit);
     }
 
     //void Update()
