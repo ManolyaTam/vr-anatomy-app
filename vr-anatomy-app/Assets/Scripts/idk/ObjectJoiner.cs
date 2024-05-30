@@ -33,33 +33,40 @@ public class ObjectJoiner : MonoBehaviour
     private void JoinObjects()
     {
         // Disable rigidbodies 
-        Rigidbody rb1 = transform.GetComponent<Rigidbody>();
+        //Rigidbody rb1 = transform.GetComponent<Rigidbody>();
         //if (rb1 != null)
         //{
-        //    rb1.isKinematic = true; 
+        //    rb1.detectCollisions = false;
+        //    rb1.isKinematic = false;
         //}
 
-        // Disable colliders if necessary
-        BoxCollider collider1 = transform.GetComponent<BoxCollider>();
-        if (collider1 != null)
-        {
-            collider1.enabled = false;
-        }
+        //Disable colliders if necessary
+        //BoxCollider collider1 = transform.GetComponent<BoxCollider>();
+        //if (collider1 != null)
+        //{
+        //    collider1.enabled = false;
+        //}
 
         // Remove XR Grabbable component
-        XRGrabInteractable grabbable1 = transform.GetComponent<XRGrabInteractable>();
+        VRGrabber grabbable1 = transform.GetComponent<VRGrabber>();
         if (grabbable1 != null)
         {
-            Destroy(grabbable1);
+            grabbable1.enabled = false;
         }
 
         // Destroy the rigidbody component
-        Destroy(rb1);
+        //Destroy(rb1);
 
         // Destroy the collider component
-        Destroy(collider1);
+        //Destroy(collider1);
 
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+    }
+
+    // Method to reset the join state (to be called from ModelResetter)
+    public void ResetJoinState()
+    {
+        isJoined = false;
     }
 }

@@ -32,44 +32,44 @@ public class VRGrabber : XRGrabInteractable
         base.OnSelectEntered(args);
 
         // Stop any returning animation if it's in progress
-        StopCoroutine(ReturnToOriginalTransform());
-        isReturning = false;
+        //StopCoroutine(ReturnToOriginalTransform());
+        //isReturning = false;
     }
 
-    protected override void OnSelectExited(SelectExitEventArgs args)
-    {
-        base.OnSelectExited(args);
+    //protected override void OnSelectExited(SelectExitEventArgs args)
+    //{
+    //    base.OnSelectExited(args);
 
-        // Start the coroutine to return to the original position, rotation, and scale
-        StartCoroutine(ReturnToOriginalTransform());
-    }
+    //    // Start the coroutine to return to the original position, rotation, and scale
+    //    StartCoroutine(ReturnToOriginalTransform());
+    //}
 
-    private IEnumerator ReturnToOriginalTransform()
-    {
-        isReturning = true;
-        float duration = 1.0f; // Duration of the return animation
-        float elapsedTime = 0f;
+    //private IEnumerator ReturnToOriginalTransform()
+    //{
+    //    isReturning = true;
+    //    float duration = 1.0f; // Duration of the return animation
+    //    float elapsedTime = 0f;
 
-        Vector3 startingPosition = transform.position;
-        Quaternion startingRotation = transform.rotation;
-        Vector3 startingScale = transform.localScale;
+    //    Vector3 startingPosition = transform.position;
+    //    Quaternion startingRotation = transform.rotation;
+    //    Vector3 startingScale = transform.localScale;
 
-        while (elapsedTime < duration)
-        {
-            // Interpolate position, rotation, and scale
-            transform.position = Vector3.Lerp(startingPosition, originalPosition, elapsedTime / duration);
-            transform.rotation = Quaternion.Lerp(startingRotation, originalRotation, elapsedTime / duration);
-            transform.localScale = Vector3.Lerp(startingScale, originalScale, elapsedTime / duration);
+    //    while (elapsedTime < duration)
+    //    {
+    //        // Interpolate position, rotation, and scale
+    //        transform.position = Vector3.Lerp(startingPosition, originalPosition, elapsedTime / duration);
+    //        transform.rotation = Quaternion.Lerp(startingRotation, originalRotation, elapsedTime / duration);
+    //        transform.localScale = Vector3.Lerp(startingScale, originalScale, elapsedTime / duration);
 
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
+    //        elapsedTime += Time.deltaTime;
+    //        yield return null;
+    //    }
 
-        // Ensure the final position, rotation, and scale are set
-        transform.position = originalPosition;
-        transform.rotation = originalRotation;
-        transform.localScale = originalScale;
+    //    // Ensure the final position, rotation, and scale are set
+    //    transform.position = originalPosition;
+    //    transform.rotation = originalRotation;
+    //    transform.localScale = originalScale;
 
-        isReturning = false;
-    }
+    //    isReturning = false;
+    //}
 }
