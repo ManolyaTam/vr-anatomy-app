@@ -8,6 +8,7 @@ TagManager:
   - VRController
   - retry
   - Anchor
+  - reset
   layers:
   - Default
   - TransparentFX

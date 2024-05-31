@@ -76,7 +76,7 @@ public class QuizManager : MonoBehaviour
             //    quiz[currentQuestion].organ.SetActive(true);
             //}
             string modelName = $"{organ}Q{currentQuestion + 1}";
-            GameObject gameObject = IsGameObjectInScene(modelName);
+            GameObject gameObject = FindChildInQuizGameObject(modelName);
             if (gameObject != null)
             {
                 quiz[currentQuestion].organ = gameObject;
@@ -183,18 +183,53 @@ public class QuizManager : MonoBehaviour
         portalPanel.SetActive(true);
     }
 
-    GameObject IsGameObjectInScene(string objectName)
+    GameObject FindChildInQuizGameObject(string childObjectName)
     {
-        Scene scene = SceneManager.GetSceneByName("Quiz");
+        // Get the scene by name
+        Scene scene = SceneManager.GetSceneByName("Start");
 
+        // Check if the scene is loaded
+        if (!scene.isLoaded)
+        {
+            Debug.LogWarning("The scene 'Start' is not loaded.");
+            return null;
+        }
+
+        // Iterate through root game objects in the scene
         foreach (GameObject go in scene.GetRootGameObjects())
         {
-            if (go.name == objectName)
+            if (go.name == "--QUIZ--")
             {
-                return go;
+                // Search for the child object within the Quiz GameObject
+                Transform childTransform = go.transform.Find(childObjectName);
+                if (childTransform != null)
+                {
+                    return childTransform.gameObject; // Return the child game object if found
+                }
+                else
+                {
+                    Debug.LogWarning($"The child object '{childObjectName}' is not found in the 'Quiz' GameObject.");
+                    return null;
+                }
             }
         }
 
-        return null;
+        Debug.LogWarning("The 'Quiz' GameObject is not found in the 'Start' scene.");
+        return null; // Return null if the Quiz GameObject is not found
     }
+
+    //GameObject IsGameObjectInScene(string objectName)
+    //{
+    //    Scene scene = SceneManager.GetSceneByName("Start");
+
+    //    foreach (GameObject go in scene.GetRootGameObjects())
+    //    {
+    //        if (go.name == objectName)
+    //        {
+    //            return go;
+    //        }
+    //    }
+
+    //    return null;
+    //}
 }
