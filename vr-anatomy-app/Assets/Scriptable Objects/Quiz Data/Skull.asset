@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e34a44e69b9c4243aa93e4e6182c69c, type: 3}
+  m_Name: Skull
+  m_EditorClassIdentifier: 
+  OrganName: Skull
+  questionsAndAnswers:
+  - question: What is the primary function of the skull?
+    answers:
+    - To assist in digestion
+    - 'To protect the brain '
+    - 'To support the body''s weight '
+    - 'To help in locomotion '
+    correctAnswer: 1
+    organ: {fileID: 0}
+  - question: 'What is this bone:'
+    answers:
+    - Mandible
+    - Maxilla
+    - Nasal bone
+    - Frontal bone
+    correctAnswer: 3
+    organ: {fileID: 0}
+  - question: What is the name of the lower jawbone?
+    answers:
+    - Mandible
+    - Maxilla
+    - Zygomatic bone
+    - Sphenoid bone
+    correctAnswer: 0
+    organ: {fileID: 0}
+  - question: Which part of the skull contains the upper teeth?
+    answers:
+    - Mandible
+    - Maxilla
+    - Zygomatic bone
+    - Nasal bone
+    correctAnswer: 1
+    organ: {fileID: 0}
+  - question: 'Which bones form the sides and roof of the cranial cavity?  '
+    answers:
+    - Temporal bones
+    - Parietal bones
+    - 'Occipital bones '
+    - 'Sphenoid bones '
+    correctAnswer: 1
+    organ: {fileID: 0}
