@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 [RequireComponent(typeof(XRGrabInteractable))]
 [RequireComponent(typeof(Rigidbody))]
@@ -8,6 +9,9 @@ public class GrabLabelAndOutline : MonoBehaviour
     private XRGrabInteractable grabInteractable;
     private Outline outline;
     private Rigidbody rb;
+    public TextMeshProUGUI label;
+    public GameObject panel;
+
 
     // Public variable to set the outline color in the inspector
     public Color outlineColor = Color.yellow;
@@ -54,6 +58,11 @@ public class GrabLabelAndOutline : MonoBehaviour
             outline.OutlineColor = outlineColor; // Apply the color
             outline.enabled = true;
         }
+        if(panel != null && label != null)
+        {
+            panel.SetActive(true);
+            label.text = gameObject.name;
+        }
     }
 
     private void OnSelectExit(XRBaseInteractor interactor)
@@ -63,6 +72,14 @@ public class GrabLabelAndOutline : MonoBehaviour
         if (outline != null)
         {
             outline.enabled = false;
+        }
+        if (panel != null && label != null)
+        {
+            panel.SetActive(false);
+            label.text = "";
+        } else
+        {
+            Debug.LogError("lable or panel not passed in gameobject " + gameObject.name);
         }
     }
 
