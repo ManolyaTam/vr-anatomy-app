@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff4394219516004a9cf5682d31e1d2f, type: 3}
+  m_Name: Pelvis
+  m_EditorClassIdentifier: 
+  partName: Pelvis
+  description: The pelvis is a bony structure located at the base of the spine, connecting
+    the trunk and the legs. It consists of the hip bones (ilium, ischium, and pubis),
+    sacrum, and coccyx. The pelvis supports the weight of the upper body when sitting
+    and standing, and it provides attachment points for various muscles and ligaments
+    involved in movement and stability. Additionally, the pelvis houses and protects
+    reproductive organs and parts of the digestive and urinary systems.

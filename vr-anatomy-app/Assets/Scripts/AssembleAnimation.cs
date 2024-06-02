@@ -86,6 +86,8 @@ public class AssembleAnimation : MonoBehaviour, IPartAssignable
         initialLocalPositions = new Vector3[parts.Length];
         initialLocalRotations = new Quaternion[parts.Length];
 
+        Debug.Log("Before Chest " + parts[0].partTransform.localPosition);
+
         for (int i = 0; i < parts.Length; i++)
         {
             // Capture the initial local position and rotation
@@ -123,12 +125,12 @@ public class AssembleAnimation : MonoBehaviour, IPartAssignable
                 if (isSeparating)
                 {
                     parts[i].partTransform.localPosition = Vector3.Lerp(initialLocalPositions[i], separatedPositions[i], curvedT);
-                    parts[i].partTransform.localRotation = Quaternion.Lerp(initialLocalRotations[i], separatedRotations[i], curvedT);
+                    //parts[i].partTransform.localRotation = Quaternion.Lerp(initialLocalRotations[i], separatedRotations[i], curvedT);
                 }
                 else
                 {
                     parts[i].partTransform.localPosition = Vector3.Lerp(separatedPositions[i], initialLocalPositions[i], curvedT);
-                    parts[i].partTransform.localRotation = Quaternion.Lerp(separatedRotations[i], initialLocalRotations[i], curvedT);
+                    //parts[i].partTransform.localRotation = Quaternion.Lerp(separatedRotations[i], initialLocalRotations[i], curvedT);
                 }
             }
 
@@ -147,6 +149,7 @@ public class AssembleAnimation : MonoBehaviour, IPartAssignable
             startTime = Time.time;
             isAnimating = true;
         }
+        Debug.Log("After Chest " + parts[0].partTransform.localPosition);
     }
 
     public void CombineParts()
