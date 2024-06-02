@@ -42,14 +42,14 @@ public class GrabLabelAndOutline : MonoBehaviour
             grabInteractable.smoothRotation = true;
             grabInteractable.useDynamicAttach = true;
 
-            grabInteractable.onSelectEntered.AddListener(OnSelectEnter);
-            grabInteractable.onSelectExited.AddListener(OnSelectExit);
+            grabInteractable.onHoverEntered.AddListener(OnHoverEnter);
+            grabInteractable.onHoverExited.AddListener(OnHoverExit);
         }
 
         outline.enabled = false; // Make sure the outline is initially off
     }
 
-    private void OnSelectEnter(XRBaseInteractor interactor)
+    private void OnHoverEnter(XRBaseInteractor interactor)
     {
 
         // Enable outline on select enter
@@ -65,7 +65,7 @@ public class GrabLabelAndOutline : MonoBehaviour
         }
     }
 
-    private void OnSelectExit(XRBaseInteractor interactor)
+    private void OnHoverExit(XRBaseInteractor interactor)
     {
 
         // Disable outline on select exit
@@ -87,8 +87,8 @@ public class GrabLabelAndOutline : MonoBehaviour
     {
         if (grabInteractable != null)
         {
-            grabInteractable.onSelectEntered.RemoveListener(OnSelectEnter);
-            grabInteractable.onSelectExited.RemoveListener(OnSelectExit);
+            grabInteractable.onHoverEntered.RemoveListener(OnHoverEnter);
+            grabInteractable.onHoverExited.RemoveListener(OnHoverExit);
         }
     }
 }
