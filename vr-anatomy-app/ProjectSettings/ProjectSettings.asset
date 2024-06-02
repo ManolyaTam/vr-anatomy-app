@@ -139,6 +139,9 @@ PlayerSettings:
   bundleVersion: 1.0.0
   preloadedAssets:
   - {fileID: 11400000, guid: ae518435a4be7774e8660787406a760e, type: 2}
+  - {fileID: -7664913406445227119, guid: 66bf56874100acd4fb39ff4571fd7b79, type: 2}
+  - {fileID: 11400000, guid: 5ebcea463816d4144814f8b7fd994641, type: 2}
+  - {fileID: 11400000, guid: 17640a8e437234e4094eb7de371be6cb, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -261,8 +264,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 2800000, guid: 8bc710b14da536640affa752fc9aed87, type: 3}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/Admin/Documents/GitHub/vr-anatomy-app/user.keystore
+  AndroidKeyaliasName: key
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
@@ -270,7 +273,7 @@ PlayerSettings:
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
-  androidUseCustomKeystore: 0
+  androidUseCustomKeystore: 1
   m_AndroidBanners:
   - width: 320
     height: 180
