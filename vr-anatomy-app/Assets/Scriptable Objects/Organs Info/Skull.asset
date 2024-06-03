@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dff4394219516004a9cf5682d31e1d2f, type: 3}
   m_Name: Skull
   m_EditorClassIdentifier: 
-  partName: Sjull
+  partName: Skull
   description: The skull is a complex structure of bones forming the head in vertebrates.
     It provides protection for the brain, supports the structures of the face, and
     forms the framework for the jaws. Comprised of 22 bones, including the cranium
