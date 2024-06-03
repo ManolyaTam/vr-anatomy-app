@@ -38,3 +38,60 @@ MonoBehaviour:
     - Thinking
     correctAnswer: 0
     organ: {fileID: 0}
+  - question: What is the selected part?
+    answers:
+    - Posterior wall of left atrium
+    - Posterior semilunar fibrous scallop of p
+    - Right marginal vein
+    - Right fibrous trigone of heart
+    correctAnswer: 0
+    organ: {fileID: 0}
+  - question: Which valve is located between the left atrium and the left ventricle?
+    answers:
+    - Tricuspid valve
+    - Pulmonary valve
+    - Mitral (bicuspid) valve
+    - Aortic valve
+    correctAnswer: 2
+    organ: {fileID: 0}
+  - question: Whta is the seleted part?
+    answers:
+    - Right fibrous trigone of heart
+    - Posterior leaflet of mitral valve
+    - Posterior wall of left atrium
+    - Septal wall of left atrium
+    correctAnswer: 1
+    organ: {fileID: 0}
+  - question: The sinoatrial (SA) node is located in which part of the heart?
+    answers:
+    - Left atrium
+    - Right atrium
+    - Left ventricle
+    - Right ventricle
+    correctAnswer: 1
+    organ: {fileID: 0}
+  - question: What structure separates the left and right sides of the heart?
+    answers:
+    - Septum
+    - Atrium
+    - Ventricle
+    - Pericardium
+    correctAnswer: 0
+    organ: {fileID: 0}
+  - question: What is the selected part?
+    answers:
+    - Trabecula carnea of left ventricle
+    - Anterior papillary muscle of left ventric
+    - Atrioventricular bundle
+    - Conus branch of right coronary artery
+    correctAnswer: 0
+    organ: {fileID: 0}
+  - question: Which structure prevents the backflow of blood from the right ventricle
+      to the right atrium?
+    answers:
+    - Mitral valve
+    - Aortic valve
+    - Tricuspid valve
+    - Pulmonary valve
+    correctAnswer: 2
+    organ: {fileID: 0}
