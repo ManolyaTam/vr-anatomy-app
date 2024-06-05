@@ -9,6 +9,7 @@ TagManager:
   - retry
   - Anchor
   - reset
+  - guideObject
   layers:
   - Default
   - TransparentFX

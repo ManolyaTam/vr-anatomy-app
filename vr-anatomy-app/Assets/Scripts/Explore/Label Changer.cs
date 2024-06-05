@@ -9,6 +9,13 @@ public class LabelChanger : MonoBehaviour
 
     public void setLabel()
     {
-        label.text = gameObject.name;
+        if (label != null)
+        {
+            label.text = gameObject.name;
+        }
+        else
+        {
+            Debug.Log("missing reference at gameObject " + gameObject.name);
+        }
     }
 }

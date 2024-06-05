@@ -31,6 +31,13 @@ public class GrabLabelAndOutline : MonoBehaviour
         {
             outline = gameObject.AddComponent<Outline>();
         }
+        if (outline == null || rb == null || label == null || panel == null)
+        {
+            Debug.Log("missing reference at gameObject " + gameObject.name);
+        }
+        {
+
+        }
 
         // Set the initial color of the outline
         outline.OutlineColor = outlineColor;
