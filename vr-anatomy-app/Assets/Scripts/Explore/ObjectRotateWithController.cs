@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObjectRotateWithController : MonoBehaviour
 {
-    public GameObject objectRotateWithController;
     public float rotationSpeed = 50f;
 
     void Update()
@@ -16,6 +15,6 @@ public class ObjectRotateWithController : MonoBehaviour
         float rotationAmount = horizontalInput * rotationSpeed * Time.deltaTime;
 
         // Apply rotation to the object
-        objectRotateWithController.transform.Rotate(Vector3.up, rotationAmount);
+        gameObject.transform.Rotate(Vector3.up, rotationAmount);
     }
 }
