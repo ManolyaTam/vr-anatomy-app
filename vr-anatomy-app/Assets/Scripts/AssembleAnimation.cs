@@ -281,6 +281,7 @@ public class AssembleAnimation : MonoBehaviour, IPartAssignable
     {
         if (!isAnimating)
         {
+            ResetParts();
             isSeparating = true;
             startTime = Time.time;
             isAnimating = true;
