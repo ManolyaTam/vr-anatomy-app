@@ -1,4 +1,4 @@
-# vr-anatomy-app
+# VR Anatomy Explorer
 
 A VR application designed to bridge the gap between theory and practice in human anatomy education. Built using Unity, C#, and Blender, the app allows users to navigate and interact with detailed 3D models of anatomical structures.
 
