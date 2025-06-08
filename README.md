@@ -9,5 +9,6 @@ A VR application designed to bridge the gap between theory and practice in human
 This project was developed as my graduation project in collaboration with my teammate, Asia Shalaldeh.
 
 - [Demo](https://drive.google.com/file/d/1f9ycHAM8_Lurzsc2OhjINs_aX-jIeVg8/view?usp=sharing)
+-  [Presentation Slides](https://docs.google.com/presentation/d/1KWa95HqX5uV-IB25S9cIrCD2PAkr6v2TGA1ANwjQTMs/edit?usp=drivesdk)
 - [Try it yourself!](https://sidequestvr.com/app/34563/vr-anatomy-explorer)
 - [Read the project's Document](https://docs.google.com/document/d/1-0qfOOkj41R2iik41E8ktvyKaq7RP4Cjw27mH06eYNM/edit?usp=sharing)
